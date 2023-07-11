@@ -3,7 +3,9 @@ select  country,c.store_id ,sum(p.amount) from payment p
 		join address a on a.address_id=	c.address_id
 		join city on city.city_id=a.city_id
 		join country on country.country_id=	city.country_id
+		
 		group by country,c.store_id
+		having sum(p.amount)>500
 		order by country asc;
 
 						  
