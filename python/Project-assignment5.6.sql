@@ -1,2 +1,1 @@
-select country from country;
-
+select * from country;
